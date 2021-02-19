@@ -44,7 +44,7 @@ function App(){
       <Button text="false" onClick={()=>checkAnswer("False")}/>
       <Button text="next question" onClick={toggleRefresh}/>
       <Results />
-      <Quote />
+      <Quote refresh={refresh}/>
     </div>
   );
 };

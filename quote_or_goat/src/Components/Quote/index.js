@@ -3,9 +3,9 @@ import React, { useState, useEffect } from "react";
 //states
 
 
-const Quote = ({ }) => {
+function Quote({refresh}) {
 
-  const [quoteApi, setQuoteApi] = useState();
+  const [quoteApi, setQuoteApi] = useState("");
 
   
   useEffect(() => {
@@ -25,7 +25,7 @@ const Quote = ({ }) => {
       console.log(quoteApi);
     }
     sendFetch();
-  },[]);
+  },[refresh]);
 
 //   var regex = /(<([^>]+)>)/ig
 // ,   body = "<p>test</p>"
