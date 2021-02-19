@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import soundfile from '../../../src/BAAAA.mp3';
 
 //states
 
@@ -42,7 +43,15 @@ function Quote({ refresh, isCorrect }) {
     );
   } else if (isCorrect === false) {
     return (
+      <div>
+        {/* <audio>
+        <source src="https://www.fesliyanstudios.com/play-mp3/6543" ></source>
+      </audio> */}
+      <audio className="audio-element">
+          <source src="https://assets.coderrocketfuel.com/pomodoro-times-up.mp3"></source>
+        </audio>
       <img alt="goat" width="600px" src="http://i.imgur.com/fekQdRD.jpg"></img>
+   </div>
     );
   } else {
     return null;
