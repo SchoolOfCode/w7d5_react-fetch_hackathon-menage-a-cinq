@@ -61,3 +61,23 @@ Translate your plan into code, turn your ideas into reality. We would like you t
 - Bonus: if you have time, try to include a custom hook as well!
 
 Enjoy!
+
+Plan
+
+Folder Structure:
+
+App
+
+Components
+Button (true false next)
+Header
+Question Display
+Results Display result of fetch
+
+Hooks
+useFetch (custom)
+useDocumentTitle.js
+useAnswer (useEffect and useReducer) calls quote or goat
+
+TestFile
+CSS
