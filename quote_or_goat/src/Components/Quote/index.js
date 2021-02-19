@@ -11,7 +11,7 @@ function Quote({ refresh, isCorrect }) {
     let randomNum = Math.floor(Math.random() * 1000);
 
     async function sendFetch() {
-      let response = await fetch("https://type.fit/api/quotes");
+      let response = await fetch(process.env.REACT_APP_QUOTE_API_URL);
       let data = await response.json();
       //console.log(data.results[0].question);
       //console.log(data[Math.floor(Math.random()*1000)]);

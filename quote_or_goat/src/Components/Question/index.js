@@ -4,7 +4,7 @@ const Question = ({ question, answer, setQuestion, setAnswer, refresh }) => {
   useEffect(() => {
     async function sendFetch() {
       let response = await fetch(
-        "https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=boolean"
+        process.env.REACT_APP_API_URL
       );
       let data = await response.json();
       //console.log(data.results[0].question);
