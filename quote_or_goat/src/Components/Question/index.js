@@ -9,10 +9,10 @@ const Question = ({ question, answer, setQuestion, setAnswer }) => {
         "https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=boolean"
       );
       let data = await response.json();
-      console.log(data.results[0].question);
+      //console.log(data.results[0].question);
       setQuestion(data.results[0].question);
       setAnswer(data.results[0].correct_answer);
-      console.log(data.results[0].correct_answer);
+      //console.log(data.results[0].correct_answer);
       return data;
     }
     sendFetch();
