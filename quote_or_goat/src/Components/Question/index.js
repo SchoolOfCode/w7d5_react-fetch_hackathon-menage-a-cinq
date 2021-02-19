@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-const Question = () => {
-  const [question, setQuestion] = useState("");
-  const [answer, setAnswer] = useState("");
+const Question = ({ question, answer, setQuestion, setAnswer }) => {
+ 
 
   useEffect(() => {
     async function sendFetch() {
@@ -10,17 +9,19 @@ const Question = () => {
         "https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=boolean"
       );
       let data = await response.json();
-      console.log(data);
-      setQuestion(data.results.question);
-      setAnswer(data.results.answer);
-
+      console.log(data.results[0].question);
+      setQuestion(data.results[0].question);
+      setAnswer(data.results[0].correct_answer);
+      console.log(data.results[0].correct_answer);
       return data;
     }
-  });
+    sendFetch();
+  },[]);
 
   return (
     <div>
-      <h1></h1>
+      <h1>{question}</h1>
+      <p>{answer}</p>
     </div>
   );
 };
