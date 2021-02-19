@@ -1,5 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Oi&display=swap');
+
+body {
+  background-image: url("https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fimage.freepik.com%2Ffree-vector%2Fflat-farm-landscape_52683-9442.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+}
+
 .App {
   text-align: center;
+  
+}
+
+h1 {
+font-family: 'Akaya Kanadaka', cursive;
+  font-size: 4em;
+  margin-bottom: 0px;
+}
+
+.header {
+  padding-top: 10px;
+ 
+}
+
+.question {
+  background-color: rgba(123, 144, 11, 0.4);
 }
 
 .App-logo {
@@ -38,5 +62,16 @@
 }
 
 button {
+  font-size: 1em;
   margin: 20px;
+  background-color: #FBF9DB;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px black;
+}
+
+button:hover {
+color: white;
+  background-color: #AC473D;
+  transition: all 200ms ease-in-out;
+    cursor: pointer;
 }

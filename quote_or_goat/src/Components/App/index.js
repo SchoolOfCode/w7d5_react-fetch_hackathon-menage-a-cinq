@@ -5,11 +5,14 @@ import Button from "../Button";
 import Question from "../Question";
 import Header from "../Header";
 import Results from "../Results";
+import useFetch from '../../Hooks/useFetch';
+import useDocumentTitle from '../../Hooks/useDocumentTitle';
 
 function App(){ 
   
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
+  const [refresh, setRefresh] = useState(false);
   
   const[isCorrect, setIsCorrect] = useState("");
   //console.log(`answer${answer}`);
@@ -25,14 +28,20 @@ function App(){
       console.log(`wrong${isCorrect}`);
     };
   }
+
+  function toggleRefresh(){
+    setRefresh(!refresh);
+  }
+
+  useDocumentTitle("Happy Goat");
   
   return (
     <div className="App">
       <Header />
-      <Question question={question} answer={answer} setAnswer={setAnswer} setQuestion={setQuestion}/>
+      <Question question={question} answer={answer} setAnswer={setAnswer} setQuestion={setQuestion} refresh={refresh}/>
       <Button text="true" onClick={()=>checkAnswer("True")}/>
       <Button text="false" onClick={()=>checkAnswer("False")}/>
-      <Button text="next question"/>
+      <Button text="next question" onClick={toggleRefresh}/>
       <Results />
     </div>
   );

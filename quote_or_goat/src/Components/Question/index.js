@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Question = ({ question, answer, setQuestion, setAnswer }) => {
+const Question = ({ question, answer, setQuestion, setAnswer, refresh }) => {
  
 
   useEffect(() => {
@@ -16,11 +16,13 @@ const Question = ({ question, answer, setQuestion, setAnswer }) => {
       return data;
     }
     sendFetch();
-  },[]);
+  },[refresh]);
+
+  
 
   return (
-    <div>
-      <h1>{question}</h1>
+    <div className="question">
+      <h2>{question}</h2>
       <p>{answer}</p>
     </div>
   );
