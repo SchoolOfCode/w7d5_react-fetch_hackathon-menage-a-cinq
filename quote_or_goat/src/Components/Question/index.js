@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 const Question = ({ question, answer, setQuestion, setAnswer, refresh }) => {
- 
-
   useEffect(() => {
     async function sendFetch() {
       let response = await fetch(
@@ -16,14 +14,11 @@ const Question = ({ question, answer, setQuestion, setAnswer, refresh }) => {
       return data;
     }
     sendFetch();
-  },[refresh]);
-
-  
+  }, [refresh]);
 
   return (
     <div className="question">
       <h2>{question}</h2>
-      <p>{answer}</p>
     </div>
   );
 };
