@@ -7,6 +7,7 @@ import Header from "../Header";
 import Results from "../Results";
 import useFetch from '../../Hooks/useFetch';
 import useDocumentTitle from '../../Hooks/useDocumentTitle';
+import Quote from "../Quote"
 
 function App(){ 
   
@@ -43,6 +44,7 @@ function App(){
       <Button text="false" onClick={()=>checkAnswer("False")}/>
       <Button text="next question" onClick={toggleRefresh}/>
       <Results />
+      <Quote />
     </div>
   );
 };
