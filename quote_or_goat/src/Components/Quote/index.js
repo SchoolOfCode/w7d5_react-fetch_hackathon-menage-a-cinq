@@ -19,6 +19,7 @@ function Quote({ refresh, isCorrect }) {
       //setQuoteApi(data[0].content.rendered);
       setQuoteApi(data[randomNum]);
       console.log(quoteApi);
+      
     }
     sendFetch();
   }, [refresh]);

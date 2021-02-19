@@ -29,6 +29,7 @@ function App() {
 
   function toggleRefresh() {
     setRefresh(!refresh);
+    setIsCorrect(null);
   }
 
   useDocumentTitle("Happy Goat");
