@@ -44,8 +44,10 @@ function App() {
         setQuestion={setQuestion}
         refresh={refresh}
       />
-      <Button text="true" onClick={() => checkAnswer("True")} />
+      <div className="true-or-false">
+      <Button id = "true-button" text=" true " onClick={() => checkAnswer("True")} />
       <Button text="false" onClick={() => checkAnswer("False")} />
+      </div>
       <Button text="next question" onClick={toggleRefresh} />
 
       <Quote isCorrect={isCorrect} refresh={refresh} />

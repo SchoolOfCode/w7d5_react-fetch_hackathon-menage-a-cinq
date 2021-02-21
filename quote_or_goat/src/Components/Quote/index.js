@@ -45,7 +45,7 @@ function Quote({ refresh, isCorrect }) {
   } else if (isCorrect === false) {
     return (
       <div>
-      <img alt="goat" width="400px" src={goatArray[Math.round(Math.random()*goatArray.length)]}></img>
+      <img alt="goat" width="350px" src={goatArray[Math.round(Math.random()*goatArray.length)]}></img>
       <br/>
       <audio className="audio-element" src="https://www.fesliyanstudios.com/play-mp3/6543" controls autoPlay/>
    </div>
