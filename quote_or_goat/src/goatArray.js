@@ -14,7 +14,16 @@ const goatArray = [
     "https://media.istockphoto.com/photos/animal-photos-picture-id834732994?k=6&m=834732994&s=612x612&w=0&h=06pjJwtABcoSl5U9jBhciMb2wX9kaqEV64Qkdbs7XNI=",
     "https://images2.minutemediacdn.com/image/upload/c_crop,h_843,w_1500,x_0,y_10/v1555172614/shape/mentalfloss/iStock-177369626_1.jpg?itok=YfyNMOBR",
     "https://www.telegraph.co.uk/content/dam/pets/2016/08/11/103675361_jack-the-goat-PETS_trans_NvBQzQNjv4BqZgEkZX3M936N5BQK4Va8RWtT0gK_6EfZT336f62EI5U.jpg",
-    
+    "https://filmdaily.co/wp-content/uploads/2020/09/goat-1-.jpg",
+    "https://libreshot.com/wp-content/uploads/2020/01/funny-goat.jpg",
+    "https://t4.ftcdn.net/jpg/02/39/06/15/360_F_239061549_UwEXi7WgJNgAihnUafbBVCfjmIInJ5yd.jpg",
+    "https://image.freepik.com/free-photo/photo-happy-goat-funny-goat-shows-tongue_87555-1451.jpg",
+    "https://image.shutterstock.com/image-photo/funny-brown-goat-chew-yellow-260nw-788489698.jpg",
+    "https://thefunnybeaver.com/wp-content/uploads/2018/04/animal-baby-goat-15.jpg",
+    "https://www.askideas.com/media/39/Funny-Goat-In-Sun-Glasses-And-Smiling-Face-Meme.jpg",
+    "https://i.ytimg.com/vi/cEJy2q27hVk/maxresdefault.jpg",
+    "https://i.pinimg.com/originals/32/b4/40/32b4401312e3255a160de9b95e4488c9.jpg",
+    "https://thumbs.dreamstime.com/b/portrait-funny-goat-close-up-summer-sunny-day-50435766.jpg"
   ];
 
   export default goatArray;
