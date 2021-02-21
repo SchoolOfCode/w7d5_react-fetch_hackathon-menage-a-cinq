@@ -20,9 +20,12 @@ h1 {
   padding-top: 10px;
 }
 
-.question,
-.quote {
+.question {
   background-color: rgba(123, 144, 11, 0.4);
+}
+
+.quote {
+  background-color: rgb(252, 198, 76, 0.4);
 }
 
 .App-logo {

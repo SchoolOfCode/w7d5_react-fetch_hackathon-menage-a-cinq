@@ -8,10 +8,13 @@ const Question = ({ question, answer, setQuestion, setAnswer, refresh }) => {
       );
       let data = await response.json();
       //console.log(data.results[0].question);
-      setQuestion(data.results[0].question);
-      setAnswer(data.results[0].correct_answer);
-      //console.log(data.results[0].correct_answer);
+      let amendedData = data.results[0].question;
+      //console.log(amendedData);
+      let newData = amendedData.replaceAll("&#039;", "'").replaceAll("&quot;", "\"");
+      //console.log(newData);
+      setQuestion(newData);
       return data;
+
     }
     sendFetch();
   }, [refresh]);

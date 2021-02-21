@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import soundfile from '../../../src/BAAAA.mp3';
+import goatArray from '../../goatArray';
 
 //states
+
 
 function Quote({ refresh, isCorrect }) {
   const [quoteApi, setQuoteApi] = useState("");
   //const [goat, setGoat] = useState(null);
+ 
 
   useEffect(() => {
     let randomNum = Math.floor(Math.random() * 1000);
@@ -19,6 +22,7 @@ function Quote({ refresh, isCorrect }) {
       //setQuoteApi(data[0].content.rendered);
       setQuoteApi(data[randomNum]);
       console.log(quoteApi);
+    
       
     }
     sendFetch();
@@ -29,11 +33,7 @@ function Quote({ refresh, isCorrect }) {
   // ,   result = body.replace(regex, "");
   // console.log(result);
 
-  // const goatArray = [
-  //   "https://farmhouseguide.com/wp-content/uploads/2020/08/two-goats.jpg",
-  //   "https://i.pinimg.com/originals/3a/ee/8d/3aee8d3cf15482a8972195ef398a081a.jpg",
-  //   "http://i.imgur.com/fekQdRD.jpg",
-  // ];
+
 
   if (isCorrect) {
     return (
@@ -45,13 +45,9 @@ function Quote({ refresh, isCorrect }) {
   } else if (isCorrect === false) {
     return (
       <div>
-        {/* <audio>
-        <source src="https://www.fesliyanstudios.com/play-mp3/6543" ></source>
-      </audio> */}
-      <audio className="audio-element">
-          <source src="https://assets.coderrocketfuel.com/pomodoro-times-up.mp3"></source>
-        </audio>
-      <img alt="goat" width="600px" src="http://i.imgur.com/fekQdRD.jpg"></img>
+      <img alt="goat" width="400px" src={goatArray[Math.round(Math.random()*goatArray.length)]}></img>
+      <br/>
+      <audio className="audio-element" src="https://www.fesliyanstudios.com/play-mp3/6543" controls autoPlay/>
    </div>
     );
   } else {
