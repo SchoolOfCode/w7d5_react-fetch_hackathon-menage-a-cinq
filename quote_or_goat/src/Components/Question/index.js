@@ -6,13 +6,12 @@ const Question = ({ question, answer, setQuestion, setAnswer, refresh }) => {
       let response = await fetch(
         process.env.REACT_APP_API_URL
       );
+      
       let data = await response.json();
       //console.log(data.results[0].question);
-      let amendedData = data.results[0].question;
-      //console.log(amendedData);
-      let newData = amendedData.replaceAll("&#039;", "'").replaceAll("&quot;", "\"");
-      //console.log(newData);
-      setQuestion(newData);
+      setQuestion(data.results[0].question);
+      setAnswer(data.results[0].correct_answer);
+      //console.log(data.results[0].correct_answer);
       return data;
 
     }
